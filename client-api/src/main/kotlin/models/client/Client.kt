@@ -1,4 +1,4 @@
-package models
+package models.client
 import java.time.LocalDate
 
 class Client(
@@ -6,5 +6,5 @@ class Client(
     val name: String,
     val surname: String,
     val email: String,
-    val birthdate: LocalDate?
+    val birthdate: LocalDate
 )

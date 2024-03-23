@@ -1,6 +1,6 @@
 package repositorys.contracts
 
-import models.Client
+import models.client.Client
 
 class ClientRepository : IClientRepository {
 

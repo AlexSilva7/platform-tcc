@@ -1,5 +1,5 @@
 package repositorys.contracts
-import models.Client
+import models.client.Client
 interface IClientRepository {
     fun insertClient(client: Client)
     fun updateClient(client: Client)
