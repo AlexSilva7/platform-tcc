@@ -16,17 +16,13 @@ fun Application.module() {
     install(ContentNegotiation) {
         json()
     }
-/*
-    install(RequestValidation) {
-        validate<Requests.ClientRequest> { client ->
-            if (client.birthdate == null)
-                ValidationResult.Invalid("A customer ID should be greater than 0")
-            else ValidationResult.Valid
-        }
-    }
-*/
+
+//    System.setProperty("logback.configurationFile", "logback.xml")
+//    val _logger = LoggerFactory.getLogger(Application::class.java)
+//    _logger.info("Iniciando aplicação")
+
     routing {
         swaggerUI(path = "openapi")
-        ClientController(ClientService<Any>(ClientRepository()))
+        ClientController(ClientService(ClientRepository()))
     }
 }

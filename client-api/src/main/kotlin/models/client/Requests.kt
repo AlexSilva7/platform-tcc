@@ -17,6 +17,15 @@ object Requests{
           val birthdate: LocalDate
      )
 
+     @Serializable
+     data class ClientUpdateRequest(
+          val id: String,
+          val name: String,
+          val surname: String,
+          val email: String,
+          @Serializable(with = LocalDateSerializer::class)
+          val birthdate: LocalDate
+     )
      @Serializer(forClass = LocalDate::class)
      class LocalDateSerializer : KSerializer<LocalDate> {
           private val formatter: DateTimeFormatter = DateTimeFormatter.ISO_LOCAL_DATE

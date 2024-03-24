@@ -6,4 +6,9 @@ class Results {
         val success: Boolean,
         val message: String?
     )
+    class ClientResult(
+        val resource: Client?,
+        val success: Boolean,
+        val message: String?
+    )
 }

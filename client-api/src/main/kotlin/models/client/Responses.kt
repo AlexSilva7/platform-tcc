@@ -9,7 +9,7 @@ import java.time.format.DateTimeFormatter
 
 class Responses {
     @Serializable
-    data class ClientResponse(
+    data class ClientSerializableResponse(
         val id: String,
         val name: String,
         val surname: String,
@@ -32,7 +32,14 @@ class Responses {
 
     @Serializable
     data class ClientListResponse(
-        val resources: MutableList<ClientResponse>?,
+        val resources: MutableList<ClientSerializableResponse>?,
+        val success: Boolean,
+        val message: String?
+    )
+
+    @Serializable
+    data class ClientResponse(
+        val resource: ClientSerializableResponse?,
         val success: Boolean,
         val message: String?
     )

@@ -21,7 +21,7 @@ class ClientRepository : IClientRepository {
 
     override fun selectClient(id: String): Client {
         return _clients.find { it.id == id }
-            ?: throw NoSuchElementException("Cliente com ID $id não encontrado")
+            ?: throw NoSuchElementException()
     }
 
     override fun selectClients(): MutableList<Client> {
