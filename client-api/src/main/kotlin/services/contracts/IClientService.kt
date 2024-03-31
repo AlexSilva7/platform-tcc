@@ -5,10 +5,10 @@ import models.client.Results.ClientResult
 import models.generics.GenericResult
 
 interface IClientService {
-    fun createClient(client: Client): GenericResult
-    fun updateClient(client: Client): GenericResult
-    fun removeClient(id: String): GenericResult
-    fun getClientById(id: String): ClientResult
-    fun getAllClients(): ClientListResult
+    suspend fun createClient(client: Client): GenericResult
+    suspend fun updateClient(client: Client): GenericResult
+    suspend fun removeClient(id: String): GenericResult
+    suspend fun getClientById(id: String): ClientResult
+    suspend fun getAllClients(): ClientListResult
 }
 

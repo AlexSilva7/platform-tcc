@@ -35,4 +35,5 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.0")
     implementation("io.ktor:ktor-server-status-pages:$ktor_version")
     implementation("io.ktor:ktor-server-request-validation:$ktor_version")
+    implementation("org.mockito:mockito-core:3.12.4")
 }

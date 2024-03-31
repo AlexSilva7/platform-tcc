@@ -1,76 +1,117 @@
 package services.client
+import common.LoggerFactory
 import models.client.Client
 import models.client.Results.ClientListResult
 import models.client.Results.ClientResult
 import models.generics.GenericResult
-import org.slf4j.LoggerFactory
 import repositorys.contracts.IClientRepository
 import services.contracts.IClientService
 
 class ClientService: IClientService {
-    val _clientRepository: IClientRepository
-    private val _logger = LoggerFactory.getLogger(ClientService::class.java)
+    private val _clientRepository: IClientRepository
+    private val _logger: LoggerFactory
     constructor(clientRepository: IClientRepository){
         _clientRepository = clientRepository
+        _logger = LoggerFactory.getInstance(org.slf4j.LoggerFactory.getLogger(ClientService::class.java))
     }
-    override fun createClient(client: Client): GenericResult {
+    override suspend fun createClient(client: Client): GenericResult {
         try{
+            _logger.info("ClientService :: createClient :: " +
+                "${client.id}, ${client.name}, ${client.surname}, ${client.email}, ${client.birthdate}")
+
             _clientRepository.insertClient(client)
-            _logger.info("xxx")
-            return GenericResult("Usuário criado com sucesso", true)
+
+            _logger.info("ClientService :: createClient :: User created successfully :: " +
+                "${client.id}, ${client.name}, ${client.surname}, ${client.email}, ${client.birthdate}")
+
+            return GenericResult("User created successfully", true)
 
         }catch (ex: Exception) {
-            throw Exception("Não foi possivel processar sua solicitação")
+            _logger.error("ClientService :: createClient :: $ex")
+            throw Exception("We were unable to process your request")
 
         }
     }
-    override fun updateClient(client: Client): GenericResult {
+    override suspend fun updateClient(client: Client): GenericResult {
         try{
+            _logger.info("ClientService :: updateClient :: " +
+                "${client.id}, ${client.name}, ${client.surname}, ${client.email}, ${client.birthdate}")
+
             _clientRepository.selectClient(client.id)
             _clientRepository.updateClient(client)
-            return GenericResult("Dados atualizados com sucesso", success = true)
+
+            _logger.info("ClientService :: updateClient :: Data updated successfully :: " +
+                    "${client.id}, ${client.name}, ${client.surname}, ${client.email}, ${client.birthdate}")
+
+            return GenericResult("Data updated successfully", success = true)
 
         }catch (ex: NoSuchElementException){
-            return GenericResult("Cliente com ID ${client.id} não encontrado",
+            _logger.info("ClientService :: updateClient :: Customer with ID ${client.id} not found")
+            return GenericResult("Customer with ID ${client.id} not found",
                 false)
 
         }catch (ex: Exception){
-            throw Exception("Não foi possivel processar sua solicitação")
+            _logger.error("ClientService :: updateClient :: $ex")
+            throw Exception("We were unable to process your request")
         }
     }
-    override fun removeClient(id: String): GenericResult {
+    override suspend fun removeClient(id: String): GenericResult {
         try{
+            _logger.info("ClientService :: removeClient :: $id")
+
             _clientRepository.selectClient(id)
             _clientRepository.deleteClient(id)
-            return GenericResult("Cliente removido com sucesso", success = true)
+
+            _logger.info("ClientService :: removeClient :: Client removed successfully :: $id")
+
+            return GenericResult("Client removed successfully", success = true)
 
         }catch (ex: NoSuchElementException){
-            return GenericResult("Cliente com ID $id não encontrado",
+            _logger.info("ClientService :: removeClient :: Customer with ID $id not found")
+            return GenericResult("Customer with ID $id not found",
                 false)
 
         }catch (ex: Exception){
-            throw Exception("Não foi possivel processar sua solicitação")
+            _logger.error("ClientService :: removeClient :: $ex")
+            throw Exception("We were unable to process your request")
         }
     }
-    override fun getClientById(id: String): ClientResult {
+    override suspend fun getClientById(id: String): ClientResult {
         try{
+            _logger.info("ClientService :: getClientById :: $id")
+
+            var client = _clientRepository.selectClient(id)
+
+            _logger.info("ClientService :: getClientById :: " +
+                "${client.id}, ${client.name}, ${client.surname}, ${client.email}, ${client.birthdate}")
+
             return ClientResult(
-                resource = _clientRepository.selectClient(id),
-                message = null, success = true
+                resource = client,
+                message = null,
+                success = true
             )
 
         }catch (ex: NoSuchElementException){
-            return ClientResult(resource = null,
-                message = "Cliente com ID $id não encontrado",
+            _logger.info("ClientService :: getClientById :: Customer with ID $id not found")
+            return ClientResult(
+                resource = null,
+                message = "Customer with ID $id not found",
                 success = false)
 
         }catch (ex: Exception){
-            throw Exception("Não foi possivel processar sua solicitação")
+            _logger.error("ClientService :: getClientById :: $ex")
+            throw Exception("We were unable to process your request")
         }
     }
-    override fun getAllClients(): ClientListResult{
+    override suspend fun getAllClients(): ClientListResult{
         try{
+            _logger.info("ClientService :: getAllClients")
+
             val clients = _clientRepository.selectClients()
+
+            _logger.info("ClientService :: getAllClients :: " +
+                    "${clients.size}")
+
             return ClientListResult(
                 resources = clients,
                 message = null,
@@ -78,8 +119,10 @@ class ClientService: IClientService {
             )
 
         }catch (ex: Exception) {
+            _logger.error("ClientService :: getAllClients :: $ex")
+
             return ClientListResult(null,
-                message = "Não foi possivel recuperar a lista de clientes",
+                message = "Unable to retrieve customer list",
                 success = false
             )
         }

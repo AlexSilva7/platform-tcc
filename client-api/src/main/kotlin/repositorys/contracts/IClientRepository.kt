@@ -1,9 +1,9 @@
 package repositorys.contracts
 import models.client.Client
 interface IClientRepository {
-    fun insertClient(client: Client)
-    fun updateClient(client: Client)
-    fun deleteClient(id: String)
-    fun selectClient(id: String): Client
-    fun selectClients(): MutableList<Client>
+    suspend fun insertClient(client: Client)
+    suspend fun updateClient(client: Client)
+    suspend fun deleteClient(id: String)
+    suspend fun selectClient(id: String): Client
+    suspend fun selectClients(): MutableList<Client>
 }
