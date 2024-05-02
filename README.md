@@ -1,12 +1,5 @@
-# plataforma-tcc
-Guia para o desenvolvimento do projeto de conclusão de curso
-
 ## Objetivos
-Colocar em prática todos os conceitos aprendidos durante todo o curso preparatório da Plataforma Impact, criando um projeto rico, seguindo uma especificação aderente ao mundo real de uma empresa para ser o primeiro grande item de portfolio no curriculo dos estudantes
-
-## Instruções
-- Liberdade de escolha das tecnologias, desde que os requisitos sejam planamente atendidos
-- O estudante deve criar um repositório no github.com com o nome **plataforma-tcc**
+Portfólio
 
 ## Requisitos de negócio
 Criar um sistema composto por serviços independentes:
