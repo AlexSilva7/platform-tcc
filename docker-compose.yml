@@ -1,0 +1,18 @@
+version: '3.7'
+
+services:
+  client_api:
+    build:
+      context: ./client-api
+    container_name: client-api
+    volumes:
+      - ./logs:/app/logs
+    restart: always
+    ports:
+      - 8080:8080
+    networks:
+      - system_network
+
+networks:
+  system_network:
+    driver: bridge
