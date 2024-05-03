@@ -1,14 +1,14 @@
 from datetime import datetime
-from models.quotation_price import QuotationPrice
+from models.currency_price import CurrencyPrice
 
-class QuotationPriceRepository:
+class CurrencyPriceRepository:
     def __init__(self):
-        self.quotation_price_list : list[QuotationPrice] = []
+        self.quotation_price_list : list[CurrencyPrice] = []
 
     def selectQuotePriceList(self):
         return self.quotation_price_list
             
-    def insertNewQuotes(self, quotations_price: list[QuotationPrice]):
+    def insertNewQuotes(self, quotations_price: list[CurrencyPrice]):
         self.quotation_price_list.clear()
         self.quotation_price_list = quotations_price
 

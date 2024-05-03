@@ -55,7 +55,7 @@ Esse serviço deve ser capaz de:
 Esse serviço deve ser capaz de fornecer a cotação das seguintes moedas:
 - __BRL__ vs __EUR__
 - __BRL__ vs __USD__
-- __BRL__ vs __GPB__
+- __BRL__ vs __GBP__
 - __BRL__ vs __CNY__
 
 Os códigos de moeda, seguem a [ISO-4717](https://pt.iban.com/currency-codes)

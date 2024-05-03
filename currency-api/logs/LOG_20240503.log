@@ -1,0 +1,14 @@
+2024-05-03 17:53:59,812 - INFO - Main :: Iniciando aplicação
+2024-05-03 17:53:59,867 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:7000
+2024-05-03 17:53:59,867 - INFO - [33mPress CTRL+C to quit[0m
+2024-05-03 17:53:59,868 - INFO -  * Restarting with stat
+2024-05-03 17:54:01,768 - INFO - Main :: Iniciando aplicação
+2024-05-03 17:54:01,790 - WARNING -  * Debugger is active!
+2024-05-03 17:54:01,790 - INFO -  * Debugger PIN: 138-749-604
+2024-05-03 17:54:04,194 - INFO - Route :: get_quote_for_all_currencies
+2024-05-03 17:54:04,969 - INFO - 127.0.0.1 - - [03/May/2024 17:54:04] "GET /api/get-quote-for-all-currencies HTTP/1.1" 200 -
+2024-05-03 17:54:05,066 - INFO - 127.0.0.1 - - [03/May/2024 17:54:05] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-05-03 17:54:18,591 - INFO - 127.0.0.1 - - [03/May/2024 17:54:18] "[35m[1mGET /api/get-currency-quote/USD HTTP/1.1[0m" 500 -
+2024-05-03 17:54:19,220 - INFO - 127.0.0.1 - - [03/May/2024 17:54:19] "[35m[1mGET /api/get-currency-quote/USD HTTP/1.1[0m" 500 -
+2024-05-03 17:54:46,688 - INFO - 127.0.0.1 - - [03/May/2024 17:54:46] "[35m[1mGET /api/get-currency-quote/USD HTTP/1.1[0m" 500 -

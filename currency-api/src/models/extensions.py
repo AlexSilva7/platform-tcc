@@ -1,10 +1,10 @@
 from flask import jsonify
-from models.quotation_price import QuotationPrice
+from models.currency_price import CurrencyPrice
 
 class Extensions:
 
     @staticmethod
-    def toResponse(input: list[QuotationPrice]):
+    def toResponse(input: list[CurrencyPrice]):
         response = [
             {
                 'currency': obj.currency, 

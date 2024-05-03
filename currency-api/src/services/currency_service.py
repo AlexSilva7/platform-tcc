@@ -1,10 +1,10 @@
 import datetime
-from repositorys.quotation_repository import QuotationPriceRepository
-from models.quotation_price import QuotationPrice
+from repositorys.currency_repository import CurrencyPriceRepository
+from models.currency_price import CurrencyPrice
 import requests
 
 class QuotationPriceService:
-    def __init__(self, repository: QuotationPriceRepository):
+    def __init__(self, repository: CurrencyPriceRepository):
         self.repository = repository
 
     def getQuotePriceList(self):
@@ -15,7 +15,7 @@ class QuotationPriceService:
         
         return quotation_list
     
-    def getQuotePrice(self, currency: str) -> QuotationPrice:
+    def getQuotePrice(self, currency: str) -> CurrencyPrice:
         quotation_list = self.getQuotePriceList()
 
         result = [quotation_price 
@@ -24,8 +24,8 @@ class QuotationPriceService:
         
         return result
             
-    def updateNewQuotesAndReturn(self) -> list[QuotationPrice]:
-        quotations_price: list[QuotationPrice] = []
+    def updateNewQuotesAndReturn(self) -> list[CurrencyPrice]:
+        quotations_price: list[CurrencyPrice] = []
         url = "https://economia.awesomeapi.com.br/all"
 
         response = requests.get(url)
@@ -33,7 +33,7 @@ class QuotationPriceService:
 
         data = {key: value for key, value in json_data.items() if key in ['USD', 'EUR', 'GBP', 'CNY']}
         for key, value in data.items():
-            quotations_price.append(QuotationPrice(key, value['bid']))
+            quotations_price.append(CurrencyPrice(key, value['bid']))
 
         self.repository.insertNewQuotes(quotations_price)
         return quotations_price

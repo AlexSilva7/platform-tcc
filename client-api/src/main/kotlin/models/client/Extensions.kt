@@ -40,6 +40,7 @@ object Extensions {
             success = this.success
         )
     }
+    
     fun Results.ClientResult.toResponse(): Responses.ClientResponse{
         return Responses.ClientResponse(
             resource = this.resource?.toResponse(),

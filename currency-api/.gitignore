@@ -1,0 +1,21 @@
+# Arquivos de byte compilados Python
+__pycache__/
+*.pyc
+
+# Arquivos gerados pelo Python
+*.pyo
+*.pyd
+
+# Ambientes virtuais (por exemplo, virtualenv, pipenv, pyenv)
+venv/
+env/
+.venv/
+.venv3/
+env/
+.env/
+
+# Arquivos de configuração específicos do usuário
+.idea/
+.vscode/
+.DS_Store
+
