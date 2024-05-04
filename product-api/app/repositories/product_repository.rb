@@ -1,22 +1,25 @@
 class ProductRepository
-    @@products = []
-    @@id_counter = 1
+    @@products = {}
   
-    def self.all
+    def self.select_all
       @@products
     end
-  
-    def self.create(attributes)
-      product = {
-        id: @@id_counter,
-        name: attributes[:name],
-        description: attributes[:description],
-        quantity: attributes[:quantity],
-        created_at: Time.now,
-        updated_at: Time.now
-      }
-      @@products << product
-      @@id_counter += 1
+
+    def self.select_by_id(product_id)
+      @@products[product_id]
+    end
+    
+    def self.add(product_id, attributes)
+      @@products[product_id] ||= []
+      @@products[product_id] << attributes
+    end
+
+    def self.remove(product_id)
+        @@products.delete(product_id)
+    end
+
+    def self.update(product_id, new_attributes)
+      @@products[product_id] = new_attributes
     end
   end
   
