@@ -13,6 +13,17 @@ services:
     networks:
       - system_network
 
+  product_api:
+    build:
+      context: ./product-api
+    container_name: product-api
+    volumes:
+      - ./logs:/app/log
+    restart: always
+    ports:
+      - 3000:3000
+    networks:
+      - system_network
 
 networks:
   system_network:

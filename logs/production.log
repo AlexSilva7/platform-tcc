@@ -1,0 +1,7 @@
+I, [2024-05-06T01:45:25.028452 #1]  INFO -- : [62e72d43-a83e-4817-bb99-fc0f13e8973a] Started GET "/api/get-all-products" for 172.21.0.1 at 2024-05-06 01:45:25 +0000
+I, [2024-05-06T01:45:25.029165 #1]  INFO -- : [62e72d43-a83e-4817-bb99-fc0f13e8973a] Processing by ProductsController#get_all as */*
+I, [2024-05-06T01:45:25.029600 #1]  INFO -- : [62e72d43-a83e-4817-bb99-fc0f13e8973a] Completed 200 OK in 0ms (Views: 0.2ms | Allocations: 375)
+I, [2024-05-06T01:45:35.612347 #1]  INFO -- : [4ec17c9a-eb69-4c1b-bda6-eb439635e668] Started POST "/api/create-product" for 172.21.0.1 at 2024-05-06 01:45:35 +0000
+I, [2024-05-06T01:45:35.613231 #1]  INFO -- : [4ec17c9a-eb69-4c1b-bda6-eb439635e668] Processing by ProductsController#create as */*
+I, [2024-05-06T01:45:35.613278 #1]  INFO -- : [4ec17c9a-eb69-4c1b-bda6-eb439635e668]   Parameters: {"name"=>"a", "description"=>"a", "price"=>50, "product"=>{"name"=>"a", "description"=>"a", "price"=>50}}
+I, [2024-05-06T01:45:35.613650 #1]  INFO -- : [4ec17c9a-eb69-4c1b-bda6-eb439635e668] Completed 200 OK in 0ms (Views: 0.1ms | Allocations: 227)
