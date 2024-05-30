@@ -1,0 +1,54 @@
+2024-05-18 13:43:42,954 - INFO - Main :: Iniciando aplicação
+2024-05-18 13:43:43,007 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:7000
+2024-05-18 13:43:43,007 - INFO - [33mPress CTRL+C to quit[0m
+2024-05-18 13:43:43,007 - INFO -  * Restarting with stat
+2024-05-18 13:43:43,480 - INFO - Main :: Iniciando aplicação
+2024-05-18 13:43:43,500 - WARNING -  * Debugger is active!
+2024-05-18 13:43:43,509 - INFO -  * Debugger PIN: 137-222-583
+2024-05-26 18:52:56,978 - INFO - Main :: Iniciando aplicação
+2024-05-26 18:52:57,022 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:7000
+2024-05-26 18:52:57,022 - INFO - [33mPress CTRL+C to quit[0m
+2024-05-26 18:52:57,022 - INFO -  * Restarting with stat
+2024-05-26 18:52:58,721 - INFO - Main :: Iniciando aplicação
+2024-05-26 18:52:58,725 - WARNING -  * Debugger is active!
+2024-05-26 18:52:58,766 - INFO -  * Debugger PIN: 138-749-604
+2024-05-26 18:54:57,188 - INFO - Route :: get_quote_for_all_currencies
+2024-05-26 18:54:58,248 - INFO - 127.0.0.1 - - [26/May/2024 18:54:58] "GET /api/get-quote-for-all-currencies HTTP/1.1" 200 -
+2024-05-26 19:06:15,882 - INFO - Route :: get_quote_for_all_currencies
+2024-05-26 19:06:15,882 - INFO - 127.0.0.1 - - [26/May/2024 19:06:15] "GET /api/get-quote-for-all-currencies HTTP/1.1" 200 -
+2024-05-26 19:06:54,007 - INFO - Route :: get_quote_for_all_currencies
+2024-05-26 19:06:54,007 - INFO - 127.0.0.1 - - [26/May/2024 19:06:54] "GET /api/get-quote-for-all-currencies HTTP/1.1" 200 -
+2024-05-26 19:19:55,994 - INFO - Route :: get_quote_for_all_currencies
+2024-05-26 19:19:55,994 - INFO - 127.0.0.1 - - [26/May/2024 19:19:55] "GET /api/get-quote-for-all-currencies HTTP/1.1" 200 -
+2024-05-26 19:20:09,176 - INFO - Route :: get_quote_for_all_currencies
+2024-05-26 19:20:09,176 - INFO - 127.0.0.1 - - [26/May/2024 19:20:09] "GET /api/get-quote-for-all-currencies HTTP/1.1" 200 -
+2024-05-26 19:25:28,199 - INFO - Route :: get_quote_for_all_currencies
+2024-05-26 19:25:28,202 - INFO - 127.0.0.1 - - [26/May/2024 19:25:28] "GET /api/get-quote-for-all-currencies HTTP/1.1" 200 -
+2024-05-26 19:35:50,781 - INFO - Route :: get_quote_for_all_currencies
+2024-05-26 19:35:50,788 - INFO - 127.0.0.1 - - [26/May/2024 19:35:50] "GET /api/get-quote-for-all-currencies HTTP/1.1" 200 -
+2024-05-26 19:36:00,863 - INFO - Route :: get_quote_for_all_currencies
+2024-05-26 19:36:00,863 - INFO - 127.0.0.1 - - [26/May/2024 19:36:00] "GET /api/get-quote-for-all-currencies HTTP/1.1" 200 -
+2024-05-26 19:38:35,435 - INFO - Route :: get_quote_for_all_currencies
+2024-05-26 19:38:35,435 - INFO - 127.0.0.1 - - [26/May/2024 19:38:35] "GET /api/get-quote-for-all-currencies HTTP/1.1" 200 -
+2024-05-26 19:38:45,358 - INFO - Route :: get_quote_for_all_currencies
+2024-05-26 19:38:45,358 - INFO - 127.0.0.1 - - [26/May/2024 19:38:45] "GET /api/get-quote-for-all-currencies HTTP/1.1" 200 -
+2024-05-26 19:41:20,192 - INFO - Route :: get_quote_for_all_currencies
+2024-05-26 19:41:20,192 - INFO - 127.0.0.1 - - [26/May/2024 19:41:20] "GET /api/get-quote-for-all-currencies HTTP/1.1" 200 -
+2024-05-26 19:42:54,261 - INFO - Route :: get_quote_for_all_currencies
+2024-05-26 19:42:54,261 - INFO - 127.0.0.1 - - [26/May/2024 19:42:54] "GET /api/get-quote-for-all-currencies HTTP/1.1" 200 -
+2024-05-26 19:45:04,608 - INFO - Route :: get_quote_for_all_currencies
+2024-05-26 19:45:04,608 - INFO - 127.0.0.1 - - [26/May/2024 19:45:04] "GET /api/get-quote-for-all-currencies HTTP/1.1" 200 -
+2024-05-26 19:47:19,564 - INFO - Route :: get_quote_for_all_currencies
+2024-05-26 19:47:19,564 - INFO - 127.0.0.1 - - [26/May/2024 19:47:19] "GET /api/get-quote-for-all-currencies HTTP/1.1" 200 -
+2024-05-26 19:58:47,713 - INFO - Route :: get_quote_for_all_currencies
+2024-05-26 19:58:47,718 - INFO - 127.0.0.1 - - [26/May/2024 19:58:47] "GET /api/get-quote-for-all-currencies HTTP/1.1" 200 -
+2024-05-26 19:58:53,951 - INFO - Route :: get_quote_for_all_currencies
+2024-05-26 19:58:53,951 - INFO - 127.0.0.1 - - [26/May/2024 19:58:53] "GET /api/get-quote-for-all-currencies HTTP/1.1" 200 -
+2024-05-26 19:59:54,922 - INFO - Route :: get_quote_for_all_currencies
+2024-05-26 19:59:54,923 - INFO - 127.0.0.1 - - [26/May/2024 19:59:54] "GET /api/get-quote-for-all-currencies HTTP/1.1" 200 -
+2024-05-26 20:02:08,179 - INFO - Route :: get_quote_for_all_currencies
+2024-05-26 20:02:08,179 - INFO - 127.0.0.1 - - [26/May/2024 20:02:08] "GET /api/get-quote-for-all-currencies HTTP/1.1" 200 -
+2024-05-26 20:10:43,233 - INFO - Route :: get_quote_for_all_currencies
+2024-05-26 20:10:43,233 - INFO - 127.0.0.1 - - [26/May/2024 20:10:43] "GET /api/get-quote-for-all-currencies HTTP/1.1" 200 -
