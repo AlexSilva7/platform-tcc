@@ -16,9 +16,8 @@ class ProductService
         product_result = []
         products = ProductRepository.select_all
         quotes = CurrencyProvider.get_currency_quotes
-
         products.each do |key, value|
-            product = value.last 
+            product = value
             enriched_product = enrich_product_with_prices(product.price, quotes)
 
             product_result << {

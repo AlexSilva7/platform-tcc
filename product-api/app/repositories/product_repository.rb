@@ -10,8 +10,7 @@ class ProductRepository
     end
     
     def self.add(product_id, attributes)
-      @@products[product_id] ||= []
-      @@products[product_id] << attributes
+      @@products[product_id] = attributes
     end
 
     def self.remove(product_id)

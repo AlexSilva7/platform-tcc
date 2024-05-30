@@ -24,6 +24,16 @@ module ProductApi
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
 
+    # Define o logger para usar um arquivo de log específico
+    config.logger = ActiveSupport::Logger.new("log/PRODUCT_API.log")
+
+    # Define o nível de log (debug, info, warn, error, fatal)
+    config.log_level = :info
+
+    config.logger.formatter = proc do |severity, timestamp, progname, msg|
+      "#{timestamp.to_formatted_s(:db)} #{severity} #{progname}: #{msg}\n"
+    end
+
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
